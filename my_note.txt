@@ -1,0 +1,15 @@
+
+Run this project on AWS EC2
+Issue encontered: java_home was not properly set, when I run echo $JAVA_HOME, there's no output and so mvn install was failing.
+solution:
+ sudo update-java-alternatives -l
+
+/usr/lib/jvm/java-1.17.0-openjdk-amd64
+
+export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
+
+export PATH=$JAVA_HOME/bin:$PATH
+
+ source ~/.bashrc
+
+echo $JAVA_HOME
